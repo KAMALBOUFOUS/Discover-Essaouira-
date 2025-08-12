@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Tourism</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+   <h1 class="EssaouiraText">Welcome To Essaouira</h1>
+  <div class="Essaouira">
+   </div>
+  <form id="cityForm">
+    <h1>Welcome 🤗</h1>
+    
+    <input type="text" placeholder="Place Name" id="placeName" required />
+    <input type="text" placeholder="Description" id="description" required />
+    <input type="text" placeholder="Address" id="location" required />
+    <input type="url" placeholder="Image URL" id="imageUrl" required />
+    <button type="submit">+ Add</button>
+  </form>
+
+  <div id="cardsContainer" class="card-grid"></div>
+  
+<h1>MAPS</h1>
+<div id="mapsContainer"></div>
+
+<div id="map" style="height: 400px;"></div>
+
+
+
+  <h1>Suggested For You!</h1>
+  <section class="imgs">
+    <div>
+      <img src="https://ledesk.ma/wp-content/uploads/2020/11/essaouira.jpg">
+      <h2>Old Medina</h2>
+      </div>
+    <div>
+      <img src="https://www.visitmorocco.com/sites/default/files/styles/thumbnail_events_slider/public/thumbnails/image/essaouira%20mogador.jpg?itok=s79kMG8I">
+      <h2>The Skala</h2>
+      </div>
+    <div>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSSo9t05sozIl79GFuXnAQ9Qx6LOW98yhe7g&s">
+      <h2>Mogador Island</h2>
+      </div>
+    <div>
+      <img src="https://artravelers.com/media/images/18/12/23/40853e22d6.jpg">
+      <h2>Sidi Mohammed Ben Abdellah Museum</h2>
+      </div>
+    <div>
+      <img src="https://i1.hespress.com/wp-content/uploads/2024/07/plage-essaouira.jpg">
+      <h2>Essaouira Beach</h2>
+      </div>
+    <div>
+      <img src="https://tripzel.com/wp-content/uploads/2022/04/Sea-Gate.jpg">
+      <h2>Sea Gate</h2>
+      </div>
+ </section>
+  <footer class="Footer">© 2025 ALL RIGHTS RESERVED</footer>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+  const map = L.map('map').setView([31.5085, -9.7595], 13);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap contributors'
+  }).addTo(map);
+
+  L.marker([31.5085, -9.7595]).addTo(map)
+    .bindPopup('Essaouira')
+    .openPopup();
+</script>
+<script src="main.js"></script>
+</body>
+</html>
